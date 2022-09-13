@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* 캐스트케이딩, 순차 적용 아닙니다. 순서를 바꿔보세요. */
-        * {
-            color: red;
+        /* cascade 된 값은 취소되고 가장 우선순위가 높은 것이 덮어쓰이게 된다 */
+        p{
+            font-size: 30px;;
         }
-        h1,
-        h2 {
-            color: green;
+        p:hover {
+            border: 1px solid black;
         }
     </style>
 </head>
 <body>
-    <h1>hello world</h1>
-    <p>hello world</p>
+    <p style="font-size: 30px;">hollo world</p>
 </body>
 </html>
