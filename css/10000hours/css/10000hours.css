@@ -242,7 +242,7 @@ footer{
 /* 모달 CSS 끝*/
 
 /* img CSS 시작 */
-img[src="/css/10000hours/img/title.png"]{
+img[src="img/title.png"]{
     width: 529.6px;
     height: 112.01px;
     position:absolute;
@@ -252,7 +252,7 @@ img[src="/css/10000hours/img/title.png"]{
     z-index:2;
 }
 
-img[src="/css/10000hours/img/clock.png"]{
+img[src="img/clock.png"]{
     width: 221.6px;
     height: 225px;
     position:absolute;
@@ -262,18 +262,18 @@ img[src="/css/10000hours/img/clock.png"]{
     z-index:1;
 }
 
-img[src="/css/10000hours/img/click.png"]{
+img[src="img/click.png"]{
     margin: -13px -66px 0 0;
     width: 66px;
     height: 72px;
     vertical-align: text-top;
 }
 
-img[src="/css/10000hours/img/logo.png"]{
+img[src="img/logo.png"]{
     margin-bottom: 20px;
 }
 
-img[src="/css/10000hours/img/licat.png"]{
+img[src="img/licat.png"]{
     margin-top: 29px;
 }
 /* img CSS 끝 */
