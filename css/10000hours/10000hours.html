@@ -8,12 +8,47 @@
     <link rel="stylesheet" href="/css/10000hours/css/reset.css">
     <link rel=”shortcut icon” href=”/css/10000hours/img/favicon.ico”>
     <title>1만 시간의 법칙</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        
+        .img-title{
+            width: 529.6px;
+            height: 112.01px;
+            position:absolute;
+            top:273px;;
+            left: 50%;
+            margin-left: -265px;
+            z-index:2;
+        }
+        .img-clock{
+            width: 221.6px;
+            height: 225px;
+            position:absolute;
+            top:219px;
+            left: 50%;
+            margin-left: -110.8px;
+            z-index:1;
+        }
+        main{
+            position: relative;
+            top: 510px;
+        }
+        footer{
+            position: relative;
+            top: 1768px;
+        }
+        .modal{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1 class="title">
-            <img src="/css/10000hours/img/title.png" alt="">
-            <img src="/css/10000hours/img/clock.png" alt="">
+            <img class="img-title" src="/css/10000hours/img/title.png" alt="1만 시간의 법칙 메인타이틀">
+            <img class="img-clock" src="/css/10000hours/img/clock.png" alt="시계 로고">
         </h1>
     </header>
     <main class="main">

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            /* selector specificitysms 는 같아서 뒤에 쓴 css가 적용된다 */
+            /* div.weniv {
+                color: pink;
+            } */
+            /* 리디북스 예 */
+            /* div[data-track-params~="weniv"] {
+                color: black;
+            } */
+            div[class~="weniv"] {
+                color: black;
+            }
+            div.weniv {
+                color: pink;
+            }
+        </style>
+</head>
+<body>
+    <div class="weniv">hello</div>
+</body>
+</html>

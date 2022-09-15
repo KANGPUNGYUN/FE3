@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        .container{
+            display: flex;
+        }
+        .item{
+            /* width: 50px; */
+            height: 50px;
+            background-color: aqua;
+            border: 1px solid #000;
+        }
+        .item:nth-child(1){
+            /* 
+            컨텐츠를 제외한 여백의 크기 단위를 flex-grow
+            여백이 다 사라지면 같아진다!
+             */
+            flex-grow: 3;
+        }
+        .item:nth-child(2){
+            flex-grow: 1;
+        }
+        .item:nth-child(3){
+            flex-grow: 1;
+        }
+        .item:nth-child(4){
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 여백이 있을 경우 -->
+        <!-- <div class="item">hello world</div>
+        <div class="item">hello world</div>
+        <div class="item">hello world</div>
+        <div class="item">hello world</div> -->
+
+        <!-- 여백이 없을 경우 -->
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error aliquam ab dolorum dolorem perferendis, commodi ut! Debitis unde dicta impedit ut tempore vel facilis quam voluptatem, non iure sapiente fuga.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error aliquam ab dolorum dolorem perferendis, commodi ut! Debitis unde dicta impedit ut tempore vel facilis quam voluptatem, non iure sapiente fuga.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error aliquam ab dolorum dolorem perferendis, commodi ut! Debitis unde dicta impedit ut tempore vel facilis quam voluptatem, non iure sapiente fuga.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error aliquam ab dolorum dolorem perferendis, commodi ut! Debitis unde dicta impedit ut tempore vel facilis quam voluptatem, non iure sapiente fuga.</div>
+    </div>
+</body>
+</html>
