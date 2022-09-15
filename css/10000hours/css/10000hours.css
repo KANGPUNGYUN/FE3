@@ -31,4 +31,249 @@
 body{
     background-color: #5B2386;
     color: white;
+    text-align: center;
 }
+
+main{
+    position: relative;
+    top: 431px;
+}
+
+
+#form{
+    margin-top: 124px;
+}
+
+#result{
+    margin-top: 127px;
+}
+
+/* p CSS 시작 */
+main > p:nth-child(1){
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #F5DF4D;
+    margin-bottom: 118px;
+
+}
+
+.quotes > p{
+    font-family: 'GmarketSansMedium';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+p>strong{
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+p>span{
+    font-family: 'GmarketSansBold';
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: left;
+    vertical-align: middle;
+    margin: 0 12px;
+}
+/* p CSS 끝 */
+
+/* input CSS 시작 */
+input[placeholder="예)프로그래밍"],
+input[placeholder="예)5시간"],
+section>p,
+#form > h2{
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+input::placeholder{
+    color: #BABCBE;
+}
+
+input[type="text"],
+input[type="text"]{
+    width: 228px;
+    height: 57px;
+    margin: 0 17px 27px 17px;
+    background: #FFFFFF;
+    border-radius: 7px;
+    border: 0;
+    line-height: 60px;
+    vertical-align: baseline;
+}
+/* input CSS 끝 */
+
+/* 버튼 CSS 시작 */
+button{
+    height: 66px;
+    left: 678px;
+    border-radius: 56px;
+    padding: 21px 49px;
+    background-color: #FCEE21;
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #5B2386;
+    margin: 120px 9px 0 9px;
+    border: 0;
+    box-sizing: border-box;
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow:inset -5px -5px 5px #BABCBE;
+}
+
+.btn-share{
+    background-color: #FFFFFF;
+}
+/* 버튼 CSS 끝 */
+
+/* 푸터 CSS 시작 */
+
+footer{
+    position: relative;
+    top: 561px;
+}
+
+.footer > p{
+
+    font-family: 'Noto Sans KR';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-bottom: 116px;
+}
+/* 푸터 CSS 끝 */
+
+/* 큰따옴표 CSS 시작*/
+.double-quotes{
+    font-family: 'GmarketSansBold';
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 96px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FCEE214D;
+
+}
+
+.double-quotes-left{
+    float: left;
+}
+
+.double-quotes-right{
+    float: right;
+}
+
+.quotes{
+    width: 493px;
+    margin: 0 auto;
+}
+/* 큰따옴표 CSS 끝*/
+
+/* 모달 CSS 시작*/
+.modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 76px 0 68px 0;
+    width: 800px;
+    height: 800px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.modal > p{
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #5B2386;
+}
+
+.modal > p > strong{
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 96px;
+    line-height: 105.6px;
+    letter-spacing: 0em;
+}
+
+.modal > button{
+    margin-top: 74px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal > button:hover{
+    cursor: pointer;
+    box-shadow:inset -5px -5px 5px #BABCBE;
+}
+/* 모달 CSS 끝*/
+
+/* img CSS 시작 */
+img[src="/css/10000hours/img/title.png"]{
+    width: 529.6px;
+    height: 112.01px;
+    position:absolute;
+    top:194px;;
+    left: 50%;
+    margin-left: -265px;
+    z-index:2;
+}
+
+img[src="/css/10000hours/img/clock.png"]{
+    width: 221.6px;
+    height: 225px;
+    position:absolute;
+    top:140px;
+    left: 50%;
+    margin-left: -110.8px;
+    z-index:1;
+}
+
+img[src="/css/10000hours/img/click.png"]{
+    margin: -13px -66px 0 0;
+    width: 66px;
+    height: 72px;
+    vertical-align: text-top;
+}
+
+img[src="/css/10000hours/img/logo.png"]{
+    margin-bottom: 20px;
+}
+
+img[src="/css/10000hours/img/licat.png"]{
+    margin-top: 29px;
+}
+/* img CSS 끝 */
