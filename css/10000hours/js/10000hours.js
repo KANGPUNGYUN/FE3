@@ -7,10 +7,21 @@ function result(){
 
     var regex = /[^0-9]/g;
     var timeInt = timeinput.value.replace(regex, "");
-    var timeresult = 10000/timeInt;
+    
+    console.log(timeInt);
+    if(timeInt != ""){
+        var timeresult = 10000/timeInt;
+        time.innerText = timeresult;
+    }else{
+            alert("시간을 입력해주세요");
+    }
 
-    goal.innerText = goalinput.value;
-    time.innerText = timeresult;
+    if(goalinput.value != ""){
+        goal.innerText = goalinput.value;
+    }else{
+        alert("목표를 입력해주세요");
+    }
+
 }
 
 /** 모달을 여는 함수 */
