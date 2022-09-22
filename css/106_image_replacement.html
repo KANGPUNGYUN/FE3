@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image replacement</title>
+    <style>
+        .ir_pm{
+
+            /* 1. 과거 PC용 사용된 이미지 내에 의미있는 텍스트의 대체텍스트를 제공할 때 */
+            /* display:block;
+            overflow:hidden;
+            Font-size:1px;
+            line-height:0;
+            text-indent:-9999px; */
+
+            /* 2. 과거 모바일용 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+            display:block;
+            overflow:hidden;
+            font-size:1px;
+            line-height:0;
+            color:transparent; 
+            /* transparent 키워드는 IE9부터 사용 가능하기 때문에 PC에서는 빠져있습니다.
+            https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#transparent */
+        }
+
+        /* 3. 스크린리더가 읽을 필요는 없지만  마크업 구조상 필요한 경우 */
+        .screen_out {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        /* 4. 중요한 이미지 대체텍스트로 이미지 off 시 에도 대체 텍스트를 보여주고자 할때(이미지 제공이 안될때, 이미지 폰트) */
+        .ir_wa{
+            display:block;
+            overflow:hidden;
+            position:relative;
+            z-index:-1;
+            width:100%;
+            height:100%
+        }
+
+        /* 네이버 IR 방법 */
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        /* 에어비엔비 IR */
+        /* clip과 clip-path를 모두 사용 */
+        .a8jt5op[class][class] {
+            clip: rect(0 0 0 0);
+            -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+            height: 1px;
+            overflow: hidden;
+            overflow-x: clip;
+            overflow-y: clip;
+            overflow: clip;
+            overflow-x: clip;
+            overflow-y: clip;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+
+        /* 구글은 aria기법으로 IR 사용 */
+
+        button {
+            width: 100px;
+            height: 100px;
+            background-image: url("images/flower.jpg");
+        }
+    </style>
+</head>
+<body>
+    <!-- 버튼에 백그라운드 이미지가  있는 경우 -->
+    <button class=".ir_pm">
+        다음 탭 이동
+    </button>
+
+    <h2 class=".screen_out">검색</h2>
+
+    <!-- .txt_pctop에 '카페'라는 이미지 폰트를 사용하고 있을 경우 -->
+    <a href="https://cafe.duam.com" class="txt_pctop">
+        <span class=".ir_wa">카페</span>
+    </a>
+</body>
+</html>

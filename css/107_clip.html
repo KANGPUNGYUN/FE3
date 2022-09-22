@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip</title>
+    <style>
+        
+        /*
+        clip: rect()라는 메서드가 언제 사라질지 모르기 때문에 
+        clip-path: inset()이라는 메서드로 대체한다
+        */
+        img{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/flower.jpg" alt="">
+    </div>
+</body>
+</html>
