@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        iframe{
+            /* width와 max-width 모두 사용할때, 화면을 조절했을 때, max-width의 넓이가 width 보다 크다면 width의 값으로, width의 넓이가 max-width보다 크다면 max-width의 넓이로 조정됩니다. */
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* 많은 개발자들이 잘 모르는 CSS 매직을 알려드리겠습니다 :)
+		padding-top, padding-bottom 속성의 % 값은 부모 요소의 넓이에 비례합니다.
+        (content에 직접 height에 수정을 하지 않고 padding-top, padding-bottom을 주는 이유는 content의 높이 값을 설정하지 않고 유연하게 사용하기 위해서이다.)
+		예를 들어 부모의 넚이가 1200px 이라면 padding-top=50% 의 값은 600px 과 같습니다.
+        div {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        span {
+            display: block;
+            padding-top: 40%;
+            background-color: pink;
+        } */
+
+        .cont-video {
+            position: relative;
+            /* 영상의 종횡비: ((720/1280)*100)% = 56.25% */
+            padding-top: 56.25%;
+            /* padding-top: 56.25%;와 height: 56.25vw;로 영상 배경이 나오지 않고 100% 반응형을 구현할 수 있다. height: 56.25vw;는 부모 자식에 포지션 값을 주지 않고도 구현이 가능하나, 부모요소가 전체 뷰포트를 사용하지 않으면 값이 달라질 수 있기 때문에 부모요소를 잘 확인하고 사용하면 좋다.*/
+
+        }
+
+        .video-next-level {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<article class="cont-video">
+    <iframe class="video-next-level"
+    src="https://www.youtube.com/embed/4TWR90KJl84?autoplay=1&mute=1&loop=1&playlist=4TWR90KJl84&controls=1"
+    title="YouTube video player" frameborder="0" allowfullscreen class="video-next-level"></iframe>
+</article>
+
+<!-- <div>
+    <span>
+
+    </span>
+</div> -->
+</body>
+</html>
