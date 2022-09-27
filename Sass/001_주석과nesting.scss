@@ -1,0 +1,38 @@
+// 한 줄 주석
+/* 여러줄 주석 */
+ul {
+    li{
+        color: red;
+        font-size: 10px;
+    }
+}
+
+.one {
+    color: red;
+    .two {
+        color: green;
+        .three {
+            color: blue;
+        }
+        .four {
+            color: black;
+        }
+    }
+}
+
+
+// 만약 .two 안의 클래스만 사용하려면 밖으로 빼내서 사용해야 된다.
+//_(언더바)는 위의 클래스 중복을 피하기 위해 예제용으로 사용한 것이다.
+.one_ {
+    color: red;
+}
+
+.two_ {
+    color: green;
+    .three_ {
+        color: blue;
+    }
+    .four_ {
+        color: black;
+    }
+}
