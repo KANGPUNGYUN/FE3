@@ -1,0 +1,9 @@
+$pung: 10;
+@while $pung > 1 {
+    $pung: $pung - 2;
+    .content-#{$pung} {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+}

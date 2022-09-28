@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.test {
+  background-image: url("./assets/img/background.png");
+}
+
+.test2 {
+  font-size: 12px;
+}
+
+.test3 {
+  font-size: 12px;
+}
+
+.test4 {
+  font-weight: 500;
+}
+
+/* null은 css에서 선언하지 않는다. 이는 에러가 아니기 때문에 css파일을 컴파일하지만, 에러가 나면 컴파일을 할 수 없어 css파일을 만들 수 없게 된다. *//*# sourceMappingURL=007_변수.css.map */

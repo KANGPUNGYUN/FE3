@@ -1,0 +1,6 @@
+@for $pung from 1 through 3 {
+  .profil-#{$pung} {
+      background-color: red;
+      font-size: #{$pung * 10} +px;
+  }
+}

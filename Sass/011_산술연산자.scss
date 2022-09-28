@@ -1,0 +1,48 @@
+.one {
+    font-size: 10px + 10px;
+}
+
+.two {
+    font-size: 10px - 10px;
+}
+
+//문자열로 변환되는 오류
+// .three {
+//     font-size: 10px / 10;
+// }
+
+// 괄호가 있어야 하며, 곱셈이나 나눗셈 산술에서 단위는 한쪽만 있어야 한다.
+.three {
+    font-size: (10px / 10);
+}
+
+// Compilation Error
+// Error: 100px*px isn't a valid CSS value.
+//    ╷
+// 14 │     font-size: 10px * 10px;
+//    │                ^^^^^^^^^^^
+.four {
+    font-size: 10px * 10;
+}
+
+
+// Compilation Error
+// Error: Expected expression.
+//    ╷
+// 18 │     font-size: 10px ** 10px;
+//    │                      ^
+// .five {
+//     font-size: 10px ** 10px;
+// }
+
+.six {
+    font-size: 10px % 10px;
+}
+
+.seven {
+    font-size: 10px % 3;
+}
+
+.eight {
+    font-size: 3in % 10px;
+}

@@ -1,0 +1,56 @@
+@use "sass:math";
+
+$one: 10px;
+$two: 100px;
+
+@mixin avatar($size, $circle: false) {
+    // step 2: px 작성 없이도 가능한 함수
+    // width: $size+ px;
+    // height: $size+ px;
+    // background-color: red;
+
+    // @if $circle {
+    //     border-radius: ($size / 2) + px;
+    // }
+
+    // step 1: px값 작성
+    width: $size;
+    height: $size;
+    background-color: red;
+
+    @if $circle {
+        border-radius: $size / 2;
+        //권고사항
+        //math.div($size, 2) or calc($size / 2)
+        //border-radius: math.div($size, 2)
+    } @else {
+        border-radius: 3px;
+    }
+}
+
+// step 2: px 작성 없이도 가능한 함수
+// .two {
+//     @include avatar(10, true);
+// }
+
+
+.one {
+    @include avatar(10px, true);
+}
+
+.three {
+    @include avatar(10px, false);
+}
+
+// $circle 기본값이 flase이기 때문에 안써주면 $circle는 flase
+.four {
+    @include avatar(10px);
+}
+
+.five {
+    @include avatar(10px, 10 > 100);
+}
+
+.six {
+    @include avatar(10px, $one > $two);
+}
