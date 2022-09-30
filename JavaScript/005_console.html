@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        console.log("hello");
+
+        let data = {
+            one: 1,
+            two: 2,
+            three: 3
+        };
+
+        // 그냥 출력했을 때는 알파벳 순으로 출력
+        console.dir(data);
+
+        // 순회를 돌았을 때는 순서보장
+        // for (const d in data) {
+        //     console.log(d);
+        // }
+
+        let data2 = [10, 20, 30];
+
+        console.dir(data2);
+
+        console.info("hello world");
+
+        console.group("one");
+        console.log("손흥민/토트넘");
+        console.log("케인/토트넘");
+        console.log("베르통언/토트넘");
+        console.group("two");
+        console.log("살라/리버풀");
+        console.log("마네/리버풀");
+        console.log("피르미누/리버풀");
+        console.groupEnd();
+        console.log("end");
+        console.groupEnd();
+        console.log("end");
+        
+        console.table(data);
+        
+        console.error("error");
+        console.error("삐용삐용");
+
+        console.warn("warn");
+        console.warn("엘로카드");
+
+        console.log("%chello world", "color:red;font-size:32px");
+    </script>
+</body>
+</html>
