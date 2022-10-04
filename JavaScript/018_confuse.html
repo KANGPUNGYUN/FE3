@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        console.log(true == 1);
+        console.log(false == 0);
+        console.log(true === 1);
+        console.log(false === 0);
+
+        console.log("-- 1 --");
+        console.log(NaN == NaN); //false!!? NaN만 자기자신이 자기자신이 아닌(?) 특이한 케이스
+        console.log(NaN === NaN);
+
+        console.log("-- 2 --");
+        // true일 것 같은 혼란스러운 녀석들
+        console.log(false == null);
+        console.log(false == NaN);
+        console.log(false == undefined);
+
+        console.log("-- 3 --");
+        // + 연산자를 이용한 형변환
+        console.log(+false);
+        console.log(+true);
+        console.log(false * 1);
+        console.log(true * 1);
+        console.log(1+"12"); //string 둘 중 하나가 문자열이라면 문자열로 형변환
+        console.log("12"+1);
+        console.log(NaN + ""); // "NaN"
+        console.log(Infinity + ""); // "Infinity"
+        console.log(false + ""); // "false"
+        console.log(true + ""); // "true"
+
+        console.log(0 == -0);
+
+        console.log(typeof (+"100" + 1)); //number 문자 앞에 +가 되면 숫자로 변환된다.
+        console.log((+"10") + (+"10")); //20 number
+
+        console.log("2" + "2" - "2"); //20 number
+        console.log("2" + "2"); // 22 string
+        console.log("2" - "2"); // error X, 수학적 연산을 하려고 하는구나! Number로 던져줍니다.
+        console.log("a" - "a"); //NaN
+    </script>
+</body>
+</html>

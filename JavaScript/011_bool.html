@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bool</title>
+</head>
+<body>
+    <script>
+        //const(참조 변경 불가), let(변경 가능), var(사용하지 않는 것을 권장)
+        let one = true; //다른 언어는 True인 경우도 있습니다.
+        let two = false;
+        let three;
+        let four = null;
+        let five = Infinity; //비교
+
+        console.log(Boolean("")); //공백이 없는 문자열 false
+        console.log(Boolean(" ")); //공백이 있는 문자열 true
+        console.log(Boolean("abc")); //공백이 없는 문자열을 제외한 모든 문자열 true
+        console.log(Boolean(0)); //숫자 0은 false
+        console.log(Boolean(100)); //true
+        console.log(Boolean(-100)); //true
+        console.log(Boolean(three)); //undefined도 false가 나온다.
+        console.log(Boolean(four)); //null도 false가 나온다.
+        console.log(Boolean(five)); //true
+
+        //혼란을 주는 JS문법
+        console.log(Boolean([])); //true
+        console.log(Boolean({})); //true
+        
+        // JS에서는 무한 반복되는 오류 
+        // let arr = [10, 20, 30];
+        // while(arr){
+        //     arr.pop();
+        // }
+
+    </script>
+</body>
+</html>

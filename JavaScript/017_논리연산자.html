@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+</head>
+<body>
+    <script>
+        let couponlist = ['9b5fcc71', '9b5fcc72', '9b5fcc73']
+        user = [{
+            userid : 1,
+            username : 'hojun',
+            쿠폰사용가능여부 : !!couponlist[0],
+            coupon : couponlist[0],
+        }]
+
+        // true: 1
+        // false: 0
+        // and(&&): 곱
+        // or(||): 합
+        // not(!): 부정
+
+        console.log(true || false);
+        console.log(true || true);
+        console.log(true && false);
+        console.log(!false);
+        console.log(!!false); //실무에서도 정말 많이 사용합니다. boolean으로 변환(typeof > string)
+        console.log(!!""); //typeof > boolean으로 변경
+
+        //우리를 힘들게 하는 JS문법
+        console.log(!![]); //js에서만 true
+
+        console.log("----------");
+        console.log("confuse_1");
+        console.log("false" == false);
+        console.log(!"false");
+        console.log(!"0");
+        console.log("abc" / 1);
+        console.log(!!NaN);
+        console.log(!!null);
+        console.log(!!undefined);
+
+        // 단락평가
+        // username = '';
+        // username = username || '이름을 입력하지 않으신 분';
+        // console.log(username);
+
+        // 문제입니다.
+        // username도 입력하고 pw도 입력해야만 회원가입 성공여부가 true, false 나오게 해주세요.
+        // 둘 중에 1개라도 입력이 안되면 false가 나와야 합니다.
+        console.log("----------");
+        let username = '';
+        let pw = ''
+        let 회원가입성공여부 = !!(username) && !!(pw);
+        console.log(회원가입성공여부);
+
+        //정답 리스트
+        회원가입성공여부 = username && pw ? true : false; // 3항 연산자 사용
+        회원가입성공여부 = !!(username && pw);
+        회원가입성공여부 = !(!username || !pw);
+        회원가입성공여부 = !!pw && !!username;
+
+        console.log("----------");
+        console.log("드모르간 법칙");
+        // or : ||
+        // and : &&
+        const x = 0;
+        const y = 1;
+        console.log(!(x || y) === (!x && !y));
+        console.log(!(x && y) === (!x || !y));
+
+        //알고리즘 문제
+
+        let s = 0;
+        for (let i = 0; i < 100; i++) {
+            // if (i % 3 ==0){
+            //     console.log(i);
+            // }
+            // if (i % 5 ==0){
+            //     console.log(i);
+            // }
+
+            // if (i % 3 ==0 && i % 5 ==0){
+            //     console.log(i);
+            // }
+
+            if (i % 3 ==0 || i % 5 ==0){
+                console.log(i);
+                s += i;
+            }
+            
+        }
+        console.log(s);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        //object
+
+        // 1. 기본 형태
+        let newuser = {
+            id: 'licat',
+            pw: '1234',
+            name: 'pungyun',
+            email: 'pung@weniv.com',
+            active: false,
+        }
+
+        console.log(newuser["id"]);
+        //console.log(newuser[id]); //error
+        console.log(newuser.id);
+        //console.log(newuser."id"); //error
+
+        // 2. 해시테이블
+        let user = [{
+            //key: value
+            id: 'licat',
+            pw: '1234',
+            name: 'pungyun',
+            email: 'pung@weniv.com',
+            active: false,
+        }, {
+            //key: value
+            id: 'lion',
+            pw: '1234',
+            name: 'pungyun',
+            email: 'pung@likelion.com',
+            active: false,
+        }]
+
+        console.log(user[1]["id"]);
+
+        // 3. 아래와 같이 선언할 수 있습니다.
+        let a = 10;
+        let b = 20;
+        let c = 30;
+        let e = {a, b, c}; 
+        console.log(e); // {a:10, b:20, c:30}
+
+        // 4. 값을 변경할 수 있습니다
+        e["a"] = 50;
+        console.log(e);
+
+        // 5. key 값으로 문자열 외에 다른 값을 넣었을 경우
+        let txt = "hello";
+        let txt2 = {
+            0: "h",
+            1: "e",
+            2: "l",
+            3: "l",
+            4: "o",
+        };
+        
+        console.log(txt[1]);
+        console.log(txt2[1]); // 유사배열 객체
+
+        // 아래 2개 코드가 실행되게 해주는 것이 map
+        // console.log(txt2.1); //map
+        // console.log(txt2.{'one': 1}}); //map
+
+        // 6. value의 값으로 문자열 외에 다른 값을 넣었을 경우
+        let test = {
+            one: sum,
+            two: console.log,
+            three: window.innerHeight,
+            four: [10, 20, 30],
+            five: "10",
+            six: 100,
+        };
+        console.log(test);
+        test.two("hello world!");
+
+        // 7. key와 value만 뽑아낼 수 있을까?
+        console.log(Object.keys(newuser));
+        console.log(Object.values(newuser));
+        console.log(Object.entries(newuser));
+
+        // map에서 간단하게 표현할 수 있다.(자료형 map, array.map과는 다릅니다)
+        // newuser.keys();
+        // newuser.values();
+
+        //8. object spread 용법
+        let 회원정보업데이트 = {
+            name : 'cat',
+            email : 'jun@naver.com',
+            github : 'A@github.io'
+        }
+        
+        // 방법 1 
+        // newuser["name"] = 회원정보업데이트["name"];
+        // newuser["email"] = 회원정보업데이트["email"];
+
+        // 방법 2 spread 기법(최신용법) spread 기법을 사용하시면 원본을 만지지 않고 사용할 수 있습니다
+        newuser = {...newuser, ...회원정보업데이트};
+        console.log(newuser);
+
+        // spread 기법을 사용하지 않으면 원본을 건드린다.
+        // let newuser2 = newuser;
+        // newuser2["id"] = "helloworld";
+        // console.log(newuser);
+        // console.log(newuser2);
+
+        let newuser2 = {...newuser};
+        newuser2["id"] = "helloworld";
+        console.log(newuser);
+        console.log(newuser2);
+
+        function sum(x,y){
+            return x + y
+        }
+
+        console.log(sum);
+        console.log(typeof sum);
+
+        sum.value = 'pung';
+    </script>
+</body>
+</html>
