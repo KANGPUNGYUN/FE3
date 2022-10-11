@@ -84,8 +84,8 @@ console.log(b(data));
 // call by value: 값의 전달
 // call by referlence: 참조-주소값의 전달
 
-// array와 같은 convension 자료형을 넘길때에는 함수 안에서 값의 수정이 됩니다.
-// call by reference: 주소값(배열)은 참조타입이라서 변경된다.
+// array와 같은 convension 자료형을 넘길때에는 함수 안에서 값의 수정이 됩니다. 즉, 원시값은 파라미터에 복사한 값을 저장하고 참조타입은 파라미터에 참조 주소를 복사하여 저장합니다.
+// call by reference: 주소값(배열)은 참조타입이라서 변경된다. javascript는 참조값을 넘길 때 참조한 주소값을 '복사'하여 넘깁니다.
 // let test = [10, 20, 30];
 
 // function 함수(a) {
@@ -95,6 +95,8 @@ console.log(b(data));
 // 함수(test);
 
 // call by value: 넘버값은 원시타입이라서 변경이 안된다
+// javascript는 참조값을 넘길 때 참조한 주소값을 '복사'하여 넘깁니다. 그래서 call by reference가 아니라 call by value입니다. '복사한 값'인거죠. 주소값도 값이니까요.
+
 // let test = 100;
 // function 함수(a){
 //     a = 1000;
@@ -102,7 +104,7 @@ console.log(b(data));
 
 // 함수(test);
 
-// 면접질문: JS에서 call by value, referlence을 설명하세요
+// 면접질문: JS에서의 call by value, referlence을 설명하세요.
 // JS는 call by value만 있습니다. JS는 이러한 독특한 점을 설명하기 위해 JS에서는 call by sharing라는 비공식적인 개념을 가지고 있습니다.
 
 // call by reference 반례
