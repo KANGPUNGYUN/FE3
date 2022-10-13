@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <ul>
+            <li>hello1</li>
+            <li>hello2</li>
+            <li>hello3</li>
+        </ul>
+        <script>
+            const items = document.querySelectorAll("li");
+            // 버그는 아니고 var는 어휘적 유효범위이기 때문에 마지막으로 할당한 값을 콜백함수는 참조하게 됩니다.
+            for (var i = 0; i < items.length; i++) {
+                items[i].addEventListener("click", () => {
+                    alert(i);
+                });
+            }
+            // var로 선언한 경우 첫번째 리스트, 두번째 리스트, 세번째 리스트 모두 3을 alert한다.
+            // 이를 해결하기 위해서는 var가 아닌 let을 사용할 것 
+        </script>
+    </body>
+</html>
