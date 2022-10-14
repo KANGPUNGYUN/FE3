@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <p></p>
+    <input type="text">
+    <button>Write Something!</button>
+
+    <script>
+        const myBtn = document.querySelector("button");
+        const myP = document.querySelector("p");
+        const myInput = document.querySelector("input");
+
+        // 1) 입력 후 값이 p에 반영
+        // myBtn.addEventListener('click', function(){
+        //     myP.textContent = myInput.value;
+        // });
+
+        // 2) input 요소에 'input' 이벤트를 연결하면 실시간으로 값이 반영되게 만들 수도 있습니다.
+        myInput.addEventListener('input', ()=>{
+            myP.textContent = myInput.value;
+        });
+
+        // myP.outerHTML = "<div></div>";
+        // innerHTML 과 textContent는 다음의 과정과 동일하다. innerHTML은 코드가 간결해보일 수 있으나 렌더링에서는 아래의 코드가 더 효율적일 수 있음
+        myP.innerHTML = "<strong>I'm Strong!!</strong>";
+
+        const elStrong = document.createElment('strong');
+        const mytxt = document.createTextNode("I'm strong!!");
+        elStrong.appendChild(mytxt);
+        myP.appendChild(elStrong);
+
+        // innerHTML 은 요소(element) 내에 포함된 HTML 마크업을 가져오거나 설정합니다.
+
+        // 참고자료 https://developer.mozilla.org/ko/docs/Web/API/HTMLElement/innerText#%EC%98%88%EC%A0%9C
+        // innerHTML이 사이트 공격경로가 될 수 있는 보안 이슈 https://developer.mozilla.org/ko/docs/Web/API/Element/innerHTML#security_considerations
+
+        // innerText 속성은 요소의 렌더링된 텍스트 콘텐츠를 나타냅니다. (렌더링된에 주목하세요. innerText는 "사람이 읽을 수 있는" 요소만 처리합니다.) => textContent 날것 뱉음 innerText 가공해서 뱉음 
+        // textContent 속성은 노드의 텍스트 콘텐츠를 표현합니다.
+    </script>
+</body>
+</html>
