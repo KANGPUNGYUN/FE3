@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>로컬 스토리지 메모장</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <div style="width: 300px; display: flex; flex-direction: column; gap: 20px;">
+            <input type="text" name="title" id="title" />
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <button onclick="save()">메모</button>
+        </div>
+        <script>
+            const app = document.getElementById("app");
+            const title = document.getElementById("title");
+            const description = document.getElementById("description");
+            memo = {};
+            function save(){
+                if(!!title.value){
+                    memo['title'] = title.value;
+                }else{
+                    alert("제목을 입력해주세요")
+                }
+                if(!!description.value){
+                    memo['description'] = description.value;
+                }else{
+                    alert("내용을 입력해주세요")
+                }
+                localStorage.setItem("메모", JSON.stringify(memo));
+                app.innerText(localStorage.getItem("메모", JSON.stringify(memo)));
+            }
+        </script>
+    </body>
+</html>
