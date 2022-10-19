@@ -31,7 +31,10 @@
         // })
         const parent = document.querySelector('.parent');
         parent.addEventListener('click', function (event) {
+            // 이벤트 리스너 안의 this 값은 currentTarget 과 같습니다.
+            console.log(this);
             console.log(event.target);
+            
             if (event.target.nodeName === "BUTTON") {
                 event.target.innerText = "버튼4";
             }
