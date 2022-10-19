@@ -1,0 +1,74 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>위니브 스토어</title>
+        <link
+            href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link rel="stylesheet" href="src/style/style.css" />
+    </head>
+
+    <body>
+        <div id="root">
+        </div>
+        <script>
+            const root = document.getElementById('root');
+
+            async function getProductData() { // async function은 프로미스이다! getProductData() 그대로 콘솔로그하면 프로미스 값을 받게 된다. await 이라는 형식으로 반환할 값을 지정해주자.
+                const response = await fetch('http://test.api.weniv.co.kr/mall');
+                const product = response.json();
+                return product
+            }
+
+            // 통일성을 해친겁니다.
+            // async await로 작성했다면 끝까지 async await,
+            // .then.catch()로 작성했다면 끝까지 .then.catch()형식으로 맞춰서 작성하면 좋습니다.
+            getProductData()
+            .then(product =>{
+                // console.log(product);
+                const mainElement = document.createElement('main');
+                mainElement.classList.add('product');
+                // console.log(mainElement);
+
+                // 통일성을 해친겁니다.
+                // innerHTML로 했으면 끝까지 innerHTML작성하거나
+                // DOM 컨트롤로 처음부터 했으면 끝까지 DOM 컨트롤로 작성하십시요
+                mainElement.innerHTML = `
+                    <h1 class="ir">상품목록</h1>
+                    <ul class="product-list"></ul>
+                `;
+                // console.log(mainElement);
+
+                const productList = mainElement.querySelector('.product-list');
+                product.forEach((item) =>{
+                    // console.log(item);
+                    const productDetailLink = document.createElement('a');
+                    productDetailLink.href = `/detail/${item.id}`;
+                    // console.log(productDetailLink);
+                    productDetailLink.innerHTML = `
+                        <li>
+                            <img href="${item.thumbnailImg}">
+                            <div>${item.productName}</div>
+                            <div>${item.price}</div>
+                        </li>
+                    `;
+                    // console.log(productDetailLink);
+                    productList.append(productDetailLink);            
+                })
+                console.log(mainElement);
+            })
+            .then()
+            .catch();
+        </script>
+    </body>
+</html>
+<!-- 
+    SPA: 실제로 한개의 페이지(index.html 하나에서 모두 서비스 되고 있는 페이지)
+    버튼을 눌렀을때 URL이랑 다른 페이지가 보이는 방법은 javascript로 컨트롤 한다.
+ 
+    MPA: 실제로 여러개의 페이지(index.html 여러 개에서 모두 서비스 되고 있는 페이지)
+-->
