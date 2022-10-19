@@ -51,7 +51,7 @@
                     // console.log(productDetailLink);
                     productDetailLink.innerHTML = `
                         <li>
-                            <img href="${item.thumbnailImg}">
+                            <img src="https://test.api.weniv.co.kr/${item.thumbnailImg}">
                             <div>${item.productName}</div>
                             <div>${item.price}</div>
                         </li>
@@ -60,6 +60,10 @@
                     productList.append(productDetailLink);            
                 })
                 console.log(mainElement);
+                const cart = document.createElement("a");
+                    cart.setAttribute("class", "link-btn cart-link");
+                    mainElement.append(cart);
+                    root.append(mainElement);
             })
             .then()
             .catch();
