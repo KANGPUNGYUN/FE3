@@ -89,7 +89,7 @@ function genItem(val, complete){
         li.remove();
 
         // 할일 데이터의 업데이트 함수
-        buildTasks();
+        // buildTasks(); // 이벤트 전파과정에서 버블링이벤트가 발생하여 주석처리해도 위의 buildTasks() 이벤트가 실행된다.
 
         // 다운로드 버튼 노출 함수
         showDownload();
