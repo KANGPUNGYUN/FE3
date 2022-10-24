@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+#mainForm {
+    width: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #FF8787;
+}
+
+#mainForm fieldset{
+    border: none;
+}
+
+
+/* rendered legend */
+
+/* 1. The child is a legend element.
+   2. The child's used value of 'float' is 'none'.
+   3. The child's used value of 'position' is not 'absolute' or 'fixed'.
+*/
+
+/* rendered legend는 필드셋의 패딩을 무시한다. rendered legend는 위 3가지 조건을 가져야 성립한다. */
+
+/* 참고문서 https://html.spec.whatwg.org/multipage/rendering.html#rendered-legend */
+
+#mainForm legend {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#mainForm label {
+    display: block;
+}
+
+#mainForm input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* 가상클래스 valid, input에 입력받은 값이 유효하다면을 의미합니다 */
+#mainForm input:valid {
+    background-color: #E5EBB2;
+}
+
+
+#mainForm button {
+    /* float를 사용하면 버튼들을 컨테이너로 감싸고 flex를 사용하지 않아도 된다 */
+    float: right;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #F8C4B4;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+#mainForm progress {
+    width: 100%;
+}
