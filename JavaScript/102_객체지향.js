@@ -1,6 +1,6 @@
 const me = {
     name : 'pung',
-    team : 16,
+    team : 15,
     running: function(weight){
         weight.down();
     },

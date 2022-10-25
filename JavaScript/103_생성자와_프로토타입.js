@@ -117,3 +117,28 @@ Weight.prototype.up = function() {
 Weight.prototype.down = function() {
     this.kg--;
 }
+
+const obj1 = {
+    name: 'test'
+  }
+  
+  console.log(obj1.hasOwnProperty('name')); // true
+  
+  const arr = [1,2,3];
+  
+  console.log(arr.hasOwnProperty('name')); // false Array 함수의 __proto__ 가 Object 함수의 prototype을 참조하고 있기 때문에 Array의 prototype에 존재하지 않는 Object 객체의 프로퍼티와 메서드를 사용할 수 있습니다.
+
+// 오토박싱(auto boxing): 어떠한 결과를 얻기 위해 내부적으로 원시타입을 임시로 객체화하고 사라지는 것
+
+// 아래의 식은 다음와 과정이 색략된 것이라 볼 수 있다.
+'1234'.length; // 4
+
+// 생략된 과정
+// let str = new String('1234');
+// str.length;
+
+let str = new String('1234');
+
+str.__proto__ === String.prototype; // true
+str.__proto__.__proto__ === Object.prototype; // true str.__proto__.__proto__는 스트링객체의 상위의 값(객체)의 프로토타입과 동일하다.
+
