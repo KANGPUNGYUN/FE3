@@ -781,14 +781,15 @@ let list2 = {value: 99, next: null, pre: null};
 let list3 = {value: 37, next: null, pre: null};
 let list4 = {value: 2, next: null, pre: null};
 
+list.head = list1;
 list1.next = list2;
 list2.next = list3;
 list3.next = list4;
 
-list1.pre = list.head;
+list1.pre = list;
 list2.pre = list1;
 list3.pre = list2;
-list4 = list3;
+list4.pre = list3;
 
 list1.next.next.value;
 // 37
