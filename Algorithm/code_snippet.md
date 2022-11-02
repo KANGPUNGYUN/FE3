@@ -596,9 +596,6 @@ class LinkedList {
         this.length = 0
     }
 
-    length(){
-        return this.length
-    }
     
     toString(){
         let 순회용현재노드 = this.head
