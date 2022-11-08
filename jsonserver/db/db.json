@@ -193,6 +193,15 @@
       "pubDate": "2022-11-09",
       "modDate": "2022-11-09",
       "id": 11
+    },
+    {
+      "productName": "아이폰 13 pro max",
+      "price": "1300000",
+      "stockCount": "5",
+      "viewCount": 0,
+      "pubDate": "2022-11-09",
+      "modDate": "2022-11-09",
+      "id": 12
     }
   ]
 }

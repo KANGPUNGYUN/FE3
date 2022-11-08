@@ -53,6 +53,8 @@
 
 #mainForm button {
     /* float를 사용하면 버튼들을 컨테이너로 감싸고 flex를 사용하지 않아도 된다 */
+    /* float을 해제하는 방법으로 적절. Float 된 요소의 부모요소에 overflow: hidden 속성을 부여하면 된다 */
+    
     float: right;
     padding: 10px;
     margin-left: 10px;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        const root = document.querySelector("#root");
+        const container = document.createElement("div");
+
+        // const ir = document.createElement("h1");
+        // ir.classList.add("ir");
+
+        root.appendChild(container);
+
+        container.classList.add("container");
+
+        container.innerHTML = `
+        <h1 class="ir">테스트페이지</h1>
+        <section>
+            <h2 class="section-title">색션제목</h2>
+            <img class="section-img" src="img.jpg" alt="색션이미지">
+            <p class="section-contents">내용</p>
+        </section>
+        `
+    </script>
+</body>
+</html>
