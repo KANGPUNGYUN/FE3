@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="root">test</div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"
+            integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- type="text/babel"가 없으면 JSX문법을 사용할 수 없는데 이전에 type="module"을 동시에 쓸 수 없게된다. 따라서 다음과 같이 data-plugins="transform-es2015-modules-umd"를 사용해주어 사용하게 됩니다. -->
+        <script data-plugins="transform-es2015-modules-umd" type="text/babel" src="./Main.js"></script>
+        <script data-plugins="transform-es2015-modules-umd" type="text/babel">
+            import Main from "./Main.js";
+
+            Main();
+        </script>
+    </body>
+</html>
