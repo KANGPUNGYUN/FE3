@@ -1,0 +1,216 @@
+/* 메인 로고 CSS */
+.logo{
+    width: 244px;
+    height: 48px;
+}
+
+/* 메인 컨테이너 CSS */
+#timer{
+    width: 400px;
+    height: 360px;
+    background: linear-gradient(144.07deg, #5572BB 2.13%, #374B7C 102.97%);
+    /* shadow */
+    box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+    border-radius: 16px;
+}
+
+/* 메인 컨테이너 헤더 CSS */
+.main-header{
+    display: inline-block;
+    /* overflow: hidden; */
+    position: relative;
+    width: 100%;
+}
+
+/* 메인 컨테이너 헤더 제목 CSS */
+.main-header h2{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 48px auto 23px auto;
+}
+
+/* 메인 컨테이너 헤더 구분선 CSS */
+.main-header::after{
+    content: "";
+    width: 78%;
+    height: 1px;
+    background: #5B75B4;
+    position: absolute;
+    bottom: -1px;
+    left: 44px;
+}
+
+/* 시간입력 섹션 CSS */
+.main-time{
+    margin-top: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 시간입력 플렉스 컨테이너 CSS */
+.time-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* 시간입력창 CSS */
+.box{
+    height: 80px;
+    width: 80px;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+    background: linear-gradient(314.28deg, #304577 0%, #4C65A0 83%);
+    border: 1px solid #354971;
+    border-radius: 4px;
+
+    /* text css */
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* 시간입력 라벨 CSS */
+.box-label{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #A5B6EE;
+}
+
+/* 세미클론 이미지 CSS */
+.dot{
+    margin-top: 18px;
+    width: 6px;
+    height: 26px;
+}
+
+/* 버튼섹션 CSS */
+.main-button{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* 버튼 CSS */
+button{
+    height: 48px;
+    width: 112px;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* text css */
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* 시작 비활성화 버튼 CSS */
+.start-disable::before{
+    content: url(../img/icon-start-disabled.png);
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.start-disable{
+    background: #324577;
+    color: #617199;
+    cursor: not-allowed;
+}
+
+/* 리셋 비활성화 버튼 CSS */
+.reset-disable::before{
+    content: url(../img/icon-reset-disabled.png);
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.reset-disable{
+    background: #324577;
+    color: #617199;
+    cursor: not-allowed;
+}
+
+/* 시작 활성화 버튼 CSS */
+.start-active::before{
+    content: url(../img/icon-start.png);
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.start-active{
+    display: none;
+    background: #5180FF;
+    color: #FFFFFF;
+}
+
+/* 일시정지 활성화 버튼 CSS */
+.pause-active::before{
+    content: url(../img/icon-stop.png);
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.pause-active{
+    display: none;
+    background: #15C2B8;
+    color: #FFFFFF;
+}
+
+/* 리셋 활성화 버튼 CSS */
+.reset-active::before{
+    content: url(../img/icon-reset.png);
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.reset-active{
+    display: none;
+    background: #FB7099;
+    color: #FFFFFF;
+}
+
+/* 하단 저작권 CSS */
+.copyright{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #8596BF;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위니브 타이머</title>
+    <link href="https://webfontworld.github.io/pretendard/Pretendard.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+    <header>
+        <h1 class="blind">위니브 타이머</h1>
+        <img class="logo" src="img/weniv-logo.png" alt="위니브 로고">
+    </header>
+    <main id="timer">
+        <section class="main-header">
+            <h2>TIMER</h2>
+        </section>
+        <section class="main-time">
+            <div class="time-flex">
+                <label for="hour" class="box-label">HRS</label>
+                <input type="number" id="hour" class="box" value="00" min="00" max="23">
+            </div>
+            <img class="dot" src="img/dot.png" alt="시">
+            <div class="time-flex">
+                <label for="minute" class="box-label">MIN</label>
+                <input type="number" id="minute" class="box" value="00" min="00" max="59">
+            </div>
+            <img class="dot" src="img/dot.png" alt="분">
+            <div class="time-flex">
+                <label for="second" class="box-label">SEC</label>
+                <input type="number" id="second" class="box" value="00" min="00" max="59">
+            </div>
+        </section>
+        <section class="main-button">
+            <button class="start-disable" disabled>START</button>
+            <button class="start-active">START</button>
+            <button class="pause-active">PAUSE</button>
+            <button class="reset-disable" disabled>RESET</button>
+            <button class="reset-active">RESET</button>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">ⓒ WENIV Corp.</p>
+    </footer>
+
+    <script src="timer.js"></script>
+</body>
+</html>
+
+<!-- 카운트다운 타이머 JS모듈 만들기 -->
+<!-- 카운트다운 타이머 참고영상 https://www.youtube.com/watch?v=_r_02ycMomU -->
+<!-- onchange/oninput https://ko.javascript.info/events-change-input -->
+
