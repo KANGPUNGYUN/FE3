@@ -134,28 +134,28 @@ inputEl.forEach(i => i.onchange = function(){
 })
 
 // 시간 버튼 클릭시 실행함수
-hoursEl.addEventListener('click', ()=>{
-    if(hoursEl.value <= 23){
-        hoursEl.value = (parseInt(hoursEl.value) + 1).toString().padStart(2,"0");
-    }else{
-        alert("타이머 설정시간은 최대 23시 59분 59초까지입니다.")
-    }
-})
+// hoursEl.addEventListener('click', ()=>{
+//     if(hoursEl.value <= 23){
+//         hoursEl.value = (parseInt(hoursEl.value) + 1).toString().padStart(2,"0");
+//     }else{
+//         alert("타이머 설정시간은 최대 23시 59분 59초까지입니다.")
+//     }
+// })
 
-// 분 버튼 클릭시 실행함수
-minutesEl.addEventListener('click', ()=>{
-    if(minutesEl.value <= 59){
-        minutesEl.value = (parseInt(minutesEl.value) + 1).toString().padStart(2,"0");
-    }else{
-        minutesEl.value = "00"
-    }
-})
+// // 분 버튼 클릭시 실행함수
+// minutesEl.addEventListener('click', ()=>{
+//     if(minutesEl.value <= 59){
+//         minutesEl.value = (parseInt(minutesEl.value) + 1).toString().padStart(2,"0");
+//     }else{
+//         minutesEl.value = "00"
+//     }
+// })
 
-// 초 버튼 클릭시 실행함수
-secondsEl.addEventListener('click', ()=>{
-    if(secondsEl.value <= 50){
-        secondsEl.value = (parseInt(secondsEl.value) + 10).toString().padStart(2,"0");
-    }else{
-        secondsEl.value = "00"
-    }
-})
+// // 초 버튼 클릭시 실행함수
+// secondsEl.addEventListener('click', ()=>{
+//     if(secondsEl.value <= 50){
+//         secondsEl.value = (parseInt(secondsEl.value) + 10).toString().padStart(2,"0");
+//     }else{
+//         secondsEl.value = "00"
+//     }
+// })
