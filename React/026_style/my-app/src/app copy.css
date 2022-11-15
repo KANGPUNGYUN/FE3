@@ -1,0 +1,4 @@
+/* 같은 태그로 설정된 부모의 css까지도 변경하게 됩니다.(./Components/test.css) 따라서, css앞에 module을 붙여서 구분하도록 하는것을 권장합니다. */
+.one {
+    color: red
+}
