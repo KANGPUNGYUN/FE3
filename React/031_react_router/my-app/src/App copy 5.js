@@ -12,7 +12,7 @@ function Index(){
 function ProductDetails(){
   const location = useLocation();
   // const path = location.pathname.split('/')[2]
-  const { likelion } = useParams()
+  const { id } = useParams()
   
   const value = useParams()
   console.log(value)
@@ -20,7 +20,7 @@ function ProductDetails(){
   console.log(location)
   console.log(location.pathname.split('/'))
   
-  return <h2>ProductDetails {likelion} 페이지</h2>
+  return <h2>ProductDetails {id} 페이지</h2>
 }
 
 function Cart(){
@@ -36,8 +36,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index/>}></Route>
-        {/* path에서 /:OO으로 받는 경우 같은 이름으로 useParams()을 사용해주어야 useParams()을 객체 구조분해할당할 수 있습니다 */}
-        <Route path="/product/:likelion" element={<ProductDetails/>}></Route>
+        <Route path="/product/:id" element={<ProductDetails/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
         <Route path="/buy" element={<Buy/>}></Route>
       </Routes>
