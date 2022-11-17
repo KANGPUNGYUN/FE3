@@ -1,66 +1,56 @@
-import { BrowserRouter, Routes, Route, Link, useLocation, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useLocation, useParams, Outlet } from "react-router-dom";
+
+function Index(){
+  return <div>index</div>
+}
+
+function Product(){
+  const { id } = useParams();
+  return <div>{ id }번 product</div>
+}
+
+function ProductNotice(){
+  const { id } = useParams();
+  return <div>{ id }번 product notice</div>
+}
+
+function Cart(){
+  return <div>cart</div>
+}
+
+function Coupon(){
+  return <div>coupon</div>
+}
+
+function Question(){
+  return <div>question</div>
+}
+
+function Notice(){
+  return <div>notice</div>
+}
+
+function User(){
+  return <div>user</div>
+}
 
 function App() {
   return (
     <BrowserRouter>
-      <Link to="/"> home </Link>
-      <Link to="/one"> one </Link>
-      <Link to="/two"> two </Link>
-      <Link to="/three"> three </Link>
-      {/* 라우트를 감싸줍니다. */}
       <Routes>
         <Route path="/" element={<Index />}/>
-        <Route path="/one" element={<One name='licat' />}/>
-        <Route path="/two" element={<Two />}/>
-        <Route path="/three/*" element={<Outlet />}>
-          <Route path="" element={<HojunIndex/>}/>
-          <Route path="hojunone/" element={<HojunOne/>}/>
-          <Route path="hojuntwo/" element={<HojunTwo/>}/>
+        <Route path="/products/:id" element={<Product />}/>
+        <Route path="/products/:id/*" element={<Outlet />}>
+          <Route path="notice" element={<ProductNotice />}/>
         </Route>
-        <Route path="/blog/:id" element={<Blog />}/>
+        <Route path="/cart" element={<Cart />}/>
+        <Route path="/users/coupon" element={<Coupon />}/>
+        <Route path="/users/question" element={<Question />}/>
+        <Route path="/users/notice" element={<Notice />}/>
+        <Route path="/users" element={<User />}/>
       </Routes>
     </BrowserRouter>
   );
-}
-
-function Index(){
-  return <h1>hello world0</h1>
-}
-
-function One({name}){
-  return <h1>{name} world1</h1>
-}
-
-function Two(){
-  return <h1>hello world2</h1>
-}
-
-function Three(){
-  return <h1>hello world3</h1>
-}
-
-function Blog(){
-    const location = useLocation();
-  console.log(location)
-  return <h1>hello Blog</h1>
-}
-
-function HojunIndex(){
-    const location = useLocation();
-  console.log(location)
-  return <h1>hello Hojun index</h1>
-}
-
-function HojunOne(){
-    const location = useLocation();
-  console.log(location)
-  return <h1>hello Hojun 1</h1>
-}
-
-function HojunTwo(){
-    const location = useLocation();
-  console.log(location)
-  return <h1>hello Hojun 2</h1>
 }
 
 export default App;
