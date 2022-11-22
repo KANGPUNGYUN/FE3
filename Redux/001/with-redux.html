@@ -15,7 +15,16 @@
     <div id="red"></div>
     <div id="blue"></div>
     <div id="green"></div>
+    <div id="pink"></div>
+    <div id="grey"></div>
     <script>
+
+        // 1. 새로운 컴포넌트가 생성이 될 때 코드가 컴포넌트의 개수만큼 기하급수적으로 늘어납니다.
+        // 2. 새로운 컴포넌트를 만들었는데 이전 컴포넌트도 모두 수정을 해야 합니다.
+
+        // 1. 새로운 컴포넌트가 생성이 될 때 코드가 늘어나지 않습니다.
+        // 2. 새로운 컴포넌트 안에서만 코딩하면 됩니다.
+
         // state는 현재 상태, action은 주문 받은 것! 
         function reducer(state, action) {
             console.log(state, action);
@@ -25,9 +34,9 @@
             var newState;
             if (action.type === 'CHANGE_COLOR') {
                 //복제해야 합니다. 그냥 {color:'red'}이런 식으로 리턴해줘도 되긴 하는데 리덕스의 고급기능을 쓰지 못합니다.
-                // Object.assign({}, 빈객체에 복제할 값1, 빈객체에 복제할 값2...);
+                // 이전값 객체를 스프레드로 뿌려주고 새롭게 추가될 값을 넣어줍니다.
                 console.log(state)
-                newState = Object.assign({}, state, { color: action.color });
+                newState = { ...state, color: action.color };
             }
             return newState;
         }
@@ -80,6 +89,34 @@
         }
         store.subscribe(green);
         green();
+
+        function pink() {
+            var state = store.getState();
+            document.querySelector('#pink').innerHTML = `
+                <div class="container" id="component_pink" style="background-color:${state.color}">
+                    <h1>pink</h1>
+                    <input type="button" value="fire" onclick="
+                        store.dispatch({type:'CHANGE_COLOR', color:'pink'});
+                    ">
+                </div>
+            `;
+        }
+        store.subscribe(pink);
+        pink();
+
+        function grey() {
+            var state = store.getState();
+            document.querySelector('#grey').innerHTML = `
+                <div class="container" id="component_grey" style="background-color:${state.color}">
+                    <h1>grey</h1>
+                    <input type="button" value="fire" onclick="
+                        store.dispatch({type:'CHANGE_COLOR', color:'grey'});
+                    ">
+                </div>
+            `;
+        }
+        store.subscribe(grey);
+        grey();
 
     </script>
 </body>
