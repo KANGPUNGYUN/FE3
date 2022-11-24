@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kakaoMap</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=89ef64c9417992db1fb6484f441a94a4"></script>
+</head>
+<body>
+    
+    <div id="map" style="width:500px;height:400px;"></div>
+
+    <script>
+        // 카카오 등록 앱 등록 포트: 5500 / 라이브서버 포트: 5502 
+        // 포트가 다를 경우: Failed to load resource: the server responded with a status of 401 (Unauthorized)
+        // 401에러: 클라이언트 오류 상태 응답 코드는 해당 리소스에 유효한 인증 자격 증명이 없기 때문에 요청이 적용되지 않았음을 나타냅니다.
+        // 등록한 도메인과 동일하게 적용해주어야 API를 잘 가져와 사용할 수 있습니다.
+
+        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+            level: 3 //지도의 레벨(확대, 축소 정도)
+        };
+
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    </script>
+</body>
+</html>

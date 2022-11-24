@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // 'use strict';
+       
+        // 1. 엄격모드에서 선언문을 사용하지 않는 경우 선언하지 않은 변수에 값을 할당할 수 없습니다.
+        // Uncaught ReferenceError: str is not defined
+        // str = "hello strict";
+
+        // 2. 읽기 전용 객체에 값을 할당하면 에러가 발생합니다. (일반 모드에서는 조용한 에러 —> 무시 처리)
+        // Uncaught SyntaxError: Identifier 'undefined' has already been declared
+        // let undefined = 'undefined';
+
+        // Uncaught TypeError: Cannot assign to read only property 'undefined' of object '#<Window>'
+        // var undefined = 'undefined';
+
+        // Uncaught TypeError: Cannot assign to read only property 'Infinity' of object '#<Window>'
+        // var Infinity = 100;
+
+        // 사용가능
+        // Math.Pi = 0;
+
+        // 3. 지울수 없는 값을 지우려고 하면 에러가 발생합니다. (일반 모드에서는 조용한 에러 —> 무시 처리)
+        // const employee = {
+        //     firstname: 'Jhon',
+        //     lastname: 'Doe'
+        // }
+
+        // console.log(employee.firstname);
+
+        // delete employee.firstname;
+
+        // console.log(employee.firstname); //undefined
+
+        // 일반모드 에러아님
+        // 엄격모드: Uncaught TypeError: Cannot delete property 'prototype' of function Object() { [native code] }
+        // delete Object.prototype;
+
+        // 4. 함수 파라메터에 중복된 이름을 사용할 수 없습니다.
+        // function myFunc(a,a,b){
+        //     console.log(a+a+b);
+        // }
+
+        // 일반모드에서는 7을 반환 a가 2로 2번들어가서 반환
+        // 엄격모드: Uncaught SyntaxError: Duplicate parameter name not allowed in this context
+        // myFunc(1,2,3);
+
+    </script>
+</body>
+</html>

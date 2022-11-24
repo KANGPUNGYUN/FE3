@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점진적 향상 & 우아한 저하</title>
+    <style>
+        .layout-grid{
+            display: grid;
+        }
+
+        .layout-flex{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        const container = document.querySelector('.container');
+        // 브라우저가 어떤 요소의 style.grid 프로퍼티를 지원하는 지를 확인하는 조건문
+        if (container.style.grid !== undefined){
+            // style.grid 지원하는 브라우저의 경우
+            container.classList.add('layout-grid');
+        } else {
+            // style.grid 지원하지 않는 브라우저의 경우
+            container.classList.add('layout-flex');
+        }
+    </script>
+</body>
+</html>
