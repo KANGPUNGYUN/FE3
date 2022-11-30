@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원본 html파일</title>
+
+    <link rel="shortcut icon" type="image/png" href="../jasmine/lib/jasmine-4.5.0/jasmine_favicon.png">
+    <link rel="stylesheet" href="../jasmine/lib/jasmine-4.5.0/jasmine.css">
+
+    <!-- 자스민 라이브러리 파일입니다. -->
+    <script src="../jasmine/lib/jasmine-4.5.0/jasmine.js"></script>
+    <script src="../jasmine/lib/jasmine-4.5.0/jasmine-html.js"></script>
+    <script src="../jasmine/lib/jasmine-4.5.0/boot0.js"></script>
+    <script src="../jasmine/lib/jasmine-4.5.0/boot1.js"></script>
+</head>
+<body>
+    <!-- 테스트용 코드이기 때문에 원본파일의 css와 요소가 필요하지 않습니다. 초기화 부분의 스크립트 코드는 테스트 js코드(viewManager.spec.js)로 작성합니다. 필요한 내용은 외부 js 스크립트 코드와 자스민 외부 js 스크립트 코드입니다.  -->
+    <script src="textManager.js"></script>
+    <script src="textManager.spec.js"></script>
+    <script src="viewManager.js"></script>
+    <script src="viewManager.spec.js"></script>
+
+    <!-- TDD의 장점
+
+    1. 자바스크립트는 인터프리터 언어. 컴파일러의 역할을 테스트를 통해 대신 수행하여 기능의 구동을 보장합니다. 이는 곧 코드를 안정적이고 견고하게 만들어 줍니다.
+    
+    2. 구현해야 하는 기능에 대한 높은 분석을 요구하기 때문에 서비스에 대한 이해도가 상승하고 품질을 우선하는 사고를 하게됩니다. -->
+
+    <!-- ### TDD를 사용할 때 주의해야할 점
+
+    1. 테스트 코드를 따로 작성해야 하기 때문에 시간이 더 들어가고 이는 곧 업무에 대한 부담으로 다가옵니다. 때문에 프로젝트가 급박하다면 TDD 를 사용하지 않는 편이 좋습니다. 프로젝트의 성격에 따라 신중히 판단해야합니다.
+
+    2. TDD 가 모든 예외 상황을 해결해주지는 않습니다. 결국 테스트 코드를 작성하는 사람이 고려하지 않은 상황은 테스트 코드도 놓칠 수 있기 때문에 테스트 코드를 작성했다고 해서 방심할 수는 없습니다. 테스트 코드는 견고하고 안정적인 코드를 지향하는 것이지 결코 완벽하진 않습니다. -->
+
+</body>
+</html>
