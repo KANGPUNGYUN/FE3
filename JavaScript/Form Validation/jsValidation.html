@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 폼 벨리데이션</title>
+</head>
+<body>
+    <form>
+        <label for="txt">숫자 입력 : </label>
+        <input type="text" id="txt" required pattern="[0-9]">
+        <button>제출</button>
+    </form>
+
+    <script>
+        const inp = document.querySelector('input');
+        
+        inp.addEventListener('input', () => {
+            console.log(inp.validity);
+        })
+    </script>
+    <!-- The Constraint Validation API : https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#the_constraint_validation_api -->
+</body>
+</html>
