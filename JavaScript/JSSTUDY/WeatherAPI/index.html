@@ -27,7 +27,7 @@
         <img class="load_img" src="images/loading.gif" alt="">
     </article>
     <script>
-        // const url = "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=ec44bda6f8d6c00d54cfea26a15144d8";
+        // const url = "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid={yourAppKey}}";
 
         const weatherMain = document.querySelector("#weather_info"),
             imgLoading = weatherMain.querySelector('.load_img'),
@@ -45,7 +45,7 @@
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
 
-            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=ec44bda6f8d6c00d54cfea26a15144d8`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid={yourAppKey}}`;
 
             callWeather(url);
         }
