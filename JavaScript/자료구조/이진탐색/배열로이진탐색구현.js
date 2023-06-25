@@ -1,25 +1,26 @@
-const array = [1, 1, 5, 124, 400, 599, 1004, 2876, 8712];
+const arr = [1, 1, 5, 124, 400, 599, 1004, 2876, 8712];
 
-function binarySearch(array, findValue) {
-  let left = 0;
-  let right = array.length - 1;
-  let mid = Math.floor((left + right) / 2);
-  while (left < right) {
-    if (array[mid] === findValue) {
+function binarySearch(arr, target) {
+  let start = 0;
+  let end = arr.length - 1;
+  let mid;
+
+  while (start <= end) {
+    mid = parseInt((start + end) / 2);
+
+    if (target === arr[mid]) {
       return mid;
-    }
-
-    if (array[mid] < findValue) {
-      left = mid + 1;
     } else {
-      right = mid - 1;
+      if (target < arr[mid]) {
+        end = mid - 1;
+      } else {
+        start = mid + 1;
+      }
     }
-
-    mid = Math.floor((left + right) / 2);
   }
   return -1;
 }
 
-console.log(binarySearch(array, 2876)); // 7
-console.log(binarySearch(array, 1)); // 1
-console.log(binarySearch(array, 500)); // -1
+console.log(binarySearch(arr, 2876)); // 7
+console.log(binarySearch(arr, 1)); // 1
+console.log(binarySearch(arr, 500)); // -1
