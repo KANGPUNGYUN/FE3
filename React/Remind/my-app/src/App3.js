@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
 
-export default function App() {
-  console.log("init");
+export default function App3() {
   const [state, setState] = useState(0);
-  console.log("useState", state);
+  console.log(state);
   useEffect(() => {
-    console.log("useEffect");
     setState(1);
-  }, []);
+    return () => {
+      console.log(state);
+    }; // cleanup 함수
+  }, [state]);
 
   // 여기서 실행 순서는?
 
-  // init
-  // useState 0
-  // useEffect
-  // init
-  // useState 1
-
+  // 0
+  // 1
+  // 0
+  // 1
   return <div className="App"></div>;
 }
